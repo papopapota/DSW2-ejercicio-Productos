@@ -1,6 +1,6 @@
 package com.cibertec.cibertec.controller;
 
-import com.cibertec.cibertec.model.Cliente;
+import com.cibertec.cibertec.entity.Cliente;
 import com.cibertec.cibertec.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +13,11 @@ import java.util.List;
 @RequestMapping("/url/clientes")
 public class ClienteController {
 
-     @Autowired
+    @Autowired
     private ClienteService clienteService;
 
     @GetMapping
     public List<Cliente> getAllClientes() {
-        return clienteService.getAllClientes();
+        return clienteService.listaCliente();
     }
 }
